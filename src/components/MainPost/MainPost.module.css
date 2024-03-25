@@ -1,0 +1,82 @@
+.main {
+  margin-top: 32px;
+  border-radius: 12px;
+  transition: box-shadow 0.5s ease-in-out;
+  margin-bottom: 24px;
+  position: relative;
+  box-shadow: 1px 1px 10px #dceae8;
+  color: black;
+}
+.main:hover {
+  box-shadow: 3px 3px 10px #ababab;
+  transition: 0.5s;
+}
+.mainImg {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  margin-left: 16px;
+}
+.subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  margin-left: 16px;
+  margin-bottom: 109px;
+}
+.likeBtn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.scoreContainer {
+  display: flex;
+}
+.likeContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+.dislikeContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.count {
+  font-weight: 400;
+  font-size: 16px;
+}
+.dislikeImg {
+  padding-top: 4px;
+}
+.btn {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 60px;
+  width: 150px;
+  height: 45px;
+  border: 2px solid;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  bottom: 32px;
+}
+.btn:hover {
+  background-color: #d5efd9;
+}
