@@ -4,6 +4,7 @@ import { useAppDispatch } from "../../utils/hoc";
 
 export const GET_POSTS = "GET_POSTS";
 export const GET_POST = "GET_POST";
+export const SET_SEARCH = "SET_SEARCH";
 
 export const getPosts = () => {
   return async (dispatch = useAppDispatch()) => {
@@ -24,5 +25,12 @@ export const getPost = (id: string | undefined) => {
       type: GET_POST,
       response,
     });
+  };
+};
+
+export const setSearch = (item: {}) => {
+  return {
+    type: SET_SEARCH,
+    item,
   };
 };

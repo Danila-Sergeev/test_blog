@@ -1,8 +1,22 @@
-import { GET_POST, GET_POSTS } from "../actions/posts";
+import { GET_POST, GET_POSTS, SET_SEARCH } from "../actions/posts";
+import { IPostsResponse, IPostsData } from "../constants";
 
-interface IGetCards {}
+interface IGetPosts {
+  readonly type: typeof GET_POSTS;
+  data: IPostsData;
+  response: IPostsResponse;
+}
+interface IGetPost {
+  readonly type: typeof GET_POST;
+  data: IPostsData;
+  response: IPostsResponse;
+}
+interface IGetSearch {
+  readonly type: typeof SET_SEARCH;
+  item: IPostsData;
+}
 
-export type ICardsActions = IGetCards;
+export type ICardsActions = IGetPosts | IGetPost | IGetSearch;
 
 type TinitialState = {
   posts: [];
@@ -14,8 +28,7 @@ const initialState: TinitialState = {
   post: {},
 };
 
-export const postsReducer = (state = initialState, action: any) => {
-  console.log(action);
+export const postsReducer = (state = initialState, action: ICardsActions) => {
   switch (action.type) {
     case GET_POSTS: {
       return {
@@ -29,7 +42,12 @@ export const postsReducer = (state = initialState, action: any) => {
         post: action.response.data,
       };
     }
-
+    case SET_SEARCH: {
+      return {
+        ...state,
+        posts: [action.item],
+      };
+    }
     default: {
       return state;
     }

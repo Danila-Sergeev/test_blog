@@ -1,13 +1,26 @@
 .main {
-  margin-top: 32px;
   border-radius: 12px;
   transition: box-shadow 0.5s ease-in-out;
-  margin-bottom: 24px;
+
   position: relative;
   box-shadow: 1px 1px 10px #dceae8;
   color: black;
 }
+.mainMin {
+  border-radius: 12px;
+  transition: box-shadow 0.5s ease-in-out;
+
+  position: relative;
+  box-shadow: 1px 1px 10px #dceae8;
+  color: black;
+  height: 460px;
+}
+
 .main:hover {
+  box-shadow: 3px 3px 10px #ababab;
+  transition: 0.5s;
+}
+.mainMin:hover {
   box-shadow: 3px 3px 10px #ababab;
   transition: 0.5s;
 }
@@ -31,6 +44,13 @@
   font-size: 28px;
   margin-left: 16px;
 }
+.titlemini {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  margin-left: 16px;
+  max-width: 500px;
+}
 .subtitle {
   font-weight: 400;
   font-size: 24px;
@@ -45,6 +65,7 @@
 .scoreContainer {
   display: flex;
 }
+
 .likeContainer {
   display: flex;
   align-items: center;
@@ -79,4 +100,24 @@
 }
 .btn:hover {
   background-color: #d5efd9;
+}
+.btnmin {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 60px;
+  width: 150px;
+  height: 45px;
+  border: 2px solid;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btnmin:hover {
+  background-color: #d5efd9;
+}
+.btnContainerMin {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
 }

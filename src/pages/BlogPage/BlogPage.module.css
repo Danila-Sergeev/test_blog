@@ -1,0 +1,27 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  gap: 5px;
+}
+.pagination .page_num {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 400;
+}
+.pagination .page_num:hover {
+  background-color: #cbe0f4;
+}
+
+.pagination .active {
+  background-color: #e7f3ff;
+}
